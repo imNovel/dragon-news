@@ -26,6 +26,14 @@ const LogInPage = () => {
     });
 
     console.log(res, error);
+
+    if (error) {
+          alert(error.message);
+        }
+    
+        if (res) {
+          alert("Login Successful");
+        }
   };
   console.log(watch("email"));
   return (
