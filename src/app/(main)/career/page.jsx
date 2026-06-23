@@ -6,8 +6,8 @@ export const metadata = {
 
 const CareerPage = () => {
     return (
-        <div>
-            Career
+        <div className='container mx-auto text-center min-h-[80vh] flex justify-center items-center bg-slate-100'>
+            Career Coming Soon
         </div>
     );
 };

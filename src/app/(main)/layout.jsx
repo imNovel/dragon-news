@@ -1,3 +1,4 @@
+import AdvertisementModal from "@/components/shared/AdvertisementModal";
 import BreakingNews from "@/components/shared/BreakingNews";
 import Header from "@/components/shared/Header";
 import Navbar from "@/components/shared/Navbar";
@@ -9,6 +10,7 @@ const MainLayout = ({children}) => {
       <Header />
       <BreakingNews />
       <Navbar />
+      <AdvertisementModal />
       {children}
     </div>
   );
