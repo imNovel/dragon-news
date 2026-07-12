@@ -1,6 +1,7 @@
 import LeftSideBar from '@/components/homepage/LeftSideBar';
 import NewsCard from '@/components/homepage/NewsCard';
 import RightSideBar from '@/components/homepage/RightSideBar';
+import AdvertisementModal from '@/components/shared/AdvertisementModal';
 import { getCategories, getNewsByCategoryId } from '@/lib/data';
 import React from 'react';
 
@@ -18,6 +19,7 @@ const NewsDetailsPage = async({params}) => {
         <LeftSideBar categories={categories} activeId={id} />
       </div>
       <div className="col-span-6">
+        <AdvertisementModal />
         <h2 className='font-semibold text-2xl'>Dragon News Home</h2>
         <div className="space-y-2">
         {

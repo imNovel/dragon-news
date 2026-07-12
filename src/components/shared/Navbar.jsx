@@ -17,10 +17,10 @@ const Navbar = () => {
           {" "}
           <NavLink href={"/about-us"}>About</NavLink>{" "}
         </li>
-        <li>
+        {/* <li>
           {" "}
           <NavLink href={"/career"}>Career</NavLink>{" "}
-        </li>
+        </li> */}
       </ul>
 
       <div className="flex items-center gap-2">
