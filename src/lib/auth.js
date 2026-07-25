@@ -25,4 +25,11 @@ export const auth = betterAuth({
             clientSecret: process.env.GITHUB_CLIENT_SECRET, 
         }, 
     },
+    session: {
+      cookieCache: {
+        enabled: true,
+        strategy:"jwt",
+        maxAge: 7 * 24 * 60 * 60
+      }
+  },
 });

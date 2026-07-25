@@ -14,7 +14,7 @@ const NewsDetailsPage = async({params}) => {
   const news = await getNewsByCategoryId(id);
   console.log("news", news);
   return (
-    <div className="container mx-auto grid grid-cols-12 gap-4 my-15">
+    <div className="container mx-auto md:grid md:grid-cols-12 gap-4 my-15">
       <div className="col-span-3">
         <LeftSideBar categories={categories} activeId={id} />
       </div>
@@ -27,7 +27,7 @@ const NewsDetailsPage = async({params}) => {
         }
         </div>
       </div>
-      <div className="col-span-3">
+      <div className="hidden md:block col-span-3">
         <RightSideBar />
       </div>
     </div>

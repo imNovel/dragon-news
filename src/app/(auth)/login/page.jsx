@@ -4,6 +4,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 const LogInPage = () => {
   const {
@@ -28,11 +29,11 @@ const LogInPage = () => {
     console.log(res, error);
 
     if (error) {
-          alert(error.message);
+          toast.error(error.message);
         }
     
         if (res) {
-          alert("Login Successful");
+          toast.success("Login Successful");
         }
   };
   console.log(watch("email"));

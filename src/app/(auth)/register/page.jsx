@@ -4,6 +4,7 @@ import { redirect } from "next/navigation";
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { toast } from "react-toastify";
 
 const RegisterPage = () => {
   const {
@@ -27,16 +28,15 @@ const RegisterPage = () => {
     });
     console.log(res, error, "register");
     if (error) {
-      alert(error.message);
+      toast.error(error.message);
     }
 
     if (res) {
-      alert("Registered Successful");
+      toast.success("Registered Successful");
       redirect('/')
     }
   };
-  console.log(watch("email"));
-  console.log(watch("password"));
+
   return (
     <div className="container mx-auto min-h-[80vh] flex justify-center items-center bg-slate-100">
       <div className="p-4 rounded-xl bg-white">
